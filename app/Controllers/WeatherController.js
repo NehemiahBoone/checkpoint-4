@@ -8,6 +8,7 @@ import weatherService from "../Services/WeatherService.js";
 function drawWeather() {
   console.log("THE WEATHER MAN SAYS:", ProxyState.weather);
 }
+
 export default class WeatherController {
   constructor() {
     ProxyState.on("weather", drawWeather);
