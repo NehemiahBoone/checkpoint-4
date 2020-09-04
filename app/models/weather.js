@@ -11,4 +11,20 @@ export default class Weather {
     this.city = data.name
     this.kelvin = data.main.temp
   }
+
+  get TemplateF() {
+    return `
+      <div class="col-12 text-center text-primary">
+        <h1 onclick="app.weatherController.toggleTempC()">${this.tempF.toFixed(2)} F</h1>
+      </div>
+    `
+  }
+
+  get TemplateC() {
+    return `
+      <div class="col-12 text-center text-primary">
+        <h1 onclick="app.weatherController.toggleTempF()">${this.tempC.toFixed(2)} C</h1>
+      </div>
+    `
+  }
 }

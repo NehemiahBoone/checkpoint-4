@@ -8,6 +8,16 @@ class WeatherService {
     let res = await api.get('weather');
     ProxyState.weather = new Weather(res.data);
   }
+
+  toggleTempC() {
+    let weather = ProxyState.weather
+    document.getElementById("weather").innerHTML = weather.TemplateC
+  }
+
+  toggleTempF() {
+    let weather = ProxyState.weather
+    document.getElementById("weather").innerHTML = weather.TemplateF
+  }
 }
 
 const weatherService = new WeatherService();
