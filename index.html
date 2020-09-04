@@ -9,14 +9,20 @@
   <title>Inspire</title>
 </head>
 
-<body id="bgImg">
+<body>
 
-  <main class="container">
-    <div class="row" id="app">
+  <main class="container-fluid" id="bgImg">
+
+    <div class="row" id="weather"></div>
+
+    <div class="row" id="clock"></div>
+
+    <div class="row text-center" style="position:absolute; bottom:0;">
+      <div class="col-9" id="quote">
+      </div>
+      <div class="col-3" id="todo"></div>
     </div>
-    <div class="row" id="weather">
-    </div>
-    </div>
+
   </main>
 
   <script src=" https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"

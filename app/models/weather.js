@@ -14,7 +14,7 @@ export default class Weather {
 
   get TemplateF() {
     return `
-      <div class="offset-11 col-1 text-center text-primary">
+      <div class="offset-9 col-1 text-center text-primary">
         <h1 onclick="app.weatherController.toggleTempC()">${this.tempF.toFixed(2)}F</h1>
       </div>
     `
@@ -22,7 +22,7 @@ export default class Weather {
 
   get TemplateC() {
     return `
-      <div class="offset-11 col-1 text-center text-primary">
+      <div class="offset-9 col-1 text-center text-primary">
         <h1 onclick="app.weatherController.toggleTempF()">${this.tempC.toFixed(2)}C</h1>
       </div>
     `
