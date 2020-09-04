@@ -18,9 +18,29 @@
     <div class="row" id="clock"></div>
 
     <div class="row text-center" style="position:absolute; bottom:0;">
+
       <div class="col-9" id="quote">
       </div>
-      <div class="col-3" id="todo"></div>
+
+      <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Title</h5>
+            <ul class="inline" id="todo">
+            </ul>
+          </div>
+          <form onsubmit="app.todoController.addTodo(event)" class="m-1">
+            <div class="form-group p-1">
+              <input type="text" name="todo" id="td" class="form-control" placeholder="New todo...">
+              <button type="submit" class="btn btn-success my-1">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
     </div>
 
   </main>
