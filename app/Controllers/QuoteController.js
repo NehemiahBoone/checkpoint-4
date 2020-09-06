@@ -9,8 +9,8 @@ function _drawQuote() {
 //TODO Create methods for constructor, and rendering the quote to the page
 export default class QuoteController {
   constructor() {
-    this.getQuote()
     ProxyState.on("quote", _drawQuote)
+    this.getQuote()
   }
 
   getQuote() {

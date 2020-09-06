@@ -18,7 +18,7 @@
 
     <div class="row" id="weather"></div>
 
-    <div class="row text-primary clock-height my-auto">
+    <div class="row text-light clock-height my-auto">
       <div class="col-12 my-auto" id="clock"></div>
     </div>
 
@@ -62,8 +62,8 @@
       let m = today.getMinutes()
       m = checkTime(m)
       document.getElementById('clock').innerHTML = `
-        <h1 class="text-center"> ${h}:${m} </h1>`
-      let t = setTimeout(startTime, 500)
+        <h1 class="text-center" style="font-size: 100px;"> ${h}:${m} </h1>`
+      let t = setTimeout(startTime, 1000)
     }
     function checkTime(i) {
       if (i < 10) { i = "0" + i }
