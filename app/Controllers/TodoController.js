@@ -13,7 +13,7 @@ export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
     ProxyState.on("todos", _drawTodos)
-    todoService.getTodos()
+    this.getTodos()
   }
 
   getTodos() {
