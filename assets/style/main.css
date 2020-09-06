@@ -10703,3 +10703,7 @@ ul{
 .move-left{
   width: auto
 }
+
+.clock-height{
+  min-height: 81vh;
+}
