@@ -7,7 +7,15 @@ export default class Todo {
 
   get Template() {
     return `
-      <li>${this.description} <i class="far fa-trash-alt" onclick="app.todoController.removeTodo('${this._id}')"></i></li>
+      ${this.checkTemplate}
     `
+  }
+
+  get checkTemplate() {
+    if (!this.completed) {
+      return `<li class="text-left"><input class="move-left mx-1" type="checkbox" onclick="app.todoController.toggleTodoStatus('${this._id}')">${this.description} <i class="far fa-trash-alt" onclick="app.todoController.removeTodo('${this._id}')"></i></li>`
+    } else {
+      return `<li class="text-left"><input class="move-left mx-1" type="checkbox" checked onclick="app.todoController.toggleTodoStatus('${this._id}')">${this.description} <i class="far fa-trash-alt" onclick="app.todoController.removeTodo('${this._id}')"></i></li>`
+    }
   }
 }

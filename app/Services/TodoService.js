@@ -22,12 +22,17 @@ class TodoService {
   }
 
   async toggleTodoStatus(todoId) {
-    let todo = ProxyState.todos.find(todo => todo.id == todoId);
+    let todo = ProxyState.todos.find(todo => todo._id == todoId);
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
-
-    let res = await api.put(url + todoId, todo);
+    if (todo.completed) {
+      todo.completed = false
+    } else {
+      todo.completed = true
+    }
+    let res = await api.put(url + todoId, todo)
+    ProxyState.todos = ProxyState.todos
     //TODO how do you trigger this change
   }
 
@@ -39,6 +44,7 @@ class TodoService {
     let index = ProxyState.todos.findIndex(t => t._id == todoId)
     ProxyState.todos.splice(index, 1)
     ProxyState.todos = ProxyState.todos
+    this.getTodos()
   }
 }
 
