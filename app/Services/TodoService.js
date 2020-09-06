@@ -12,7 +12,6 @@ class TodoService {
     let res = await api.get(url);
     //TODO Handle this response from the server
     ProxyState.todos = res.data.data.map(t => new Todo(t))
-    console.log(res);
   }
 
   async addTodo(todo) {
@@ -36,6 +35,10 @@ class TodoService {
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, how do you update the state
+    await api.delete(url + todoId)
+    let index = ProxyState.todos.findIndex(t => t._id == todoId)
+    ProxyState.todos.splice(index, 1)
+    ProxyState.todos = ProxyState.todos
   }
 }
 
