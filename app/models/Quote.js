@@ -6,8 +6,7 @@ export default class Quote {
 
   get Template() {
     return `
-      <h5>${this.quote}</h5>
-      <h5${this.author}</h5>
+      <p class="text-light">${this.quote}<span></span></p>
     `
   }
 }
