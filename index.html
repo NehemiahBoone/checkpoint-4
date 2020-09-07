@@ -24,7 +24,7 @@
 
     <div class="row" style="min-height: 44vh">
 
-      <div class="col-4 d-flex align-self-end" id="quote">
+      <div class="col-4 d-flex align-self-end text-display" id="quote">
       </div>
 
       <div class="offset-5 col-3 inline align-self-end">
@@ -62,7 +62,7 @@
       let m = today.getMinutes()
       m = checkTime(m)
       document.getElementById('clock').innerHTML = `
-        <h1 class="text-center" style="font-size: 100px;"> ${h}:${m} </h1>`
+        <h1 class="text-center" style="font-size: 200px;"> ${h}:${m} </h1>`
       let t = setTimeout(startTime, 1000)
     }
     function checkTime(i) {

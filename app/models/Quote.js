@@ -6,7 +6,7 @@ export default class Quote {
 
   get Template() {
     return `
-      <p class="text-light">${this.quote}<span></span></p>
+      <p class="text-light">${this.quote}</p>
     `
   }
 }

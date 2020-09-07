@@ -10719,3 +10719,7 @@ ul{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.author:hover{
+  content: attr(data-hover);
+}

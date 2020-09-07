@@ -17,8 +17,7 @@ class TodoService {
   async addTodo(todo) {
     let res = await api.post(url, todo);
     //TODO Handle this response from the server
-    let newTodo = new Todo(todo)
-    ProxyState.todos = [...ProxyState.todos, newTodo]
+    ProxyState.todos = [...ProxyState.todos, new Todo(res.data.data)]
   }
 
   async toggleTodoStatus(todoId) {
