@@ -1,9 +1,9 @@
-import Todo from "./japsdoif/Todo.js.js.js.js"
-import Weather from "./japsdoif/Weather.js.js.js.js"
+import Todo from "./Models/Todo.js"
+import Weather from "./Models/Weather.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
-import Image from "./japsdoif/Image.js.js.js.js"
-import Quote from "./japsdoif/Quote.js.js.js.js"
+import Image from "./Models/Image.js"
+import Quote from "./Models/Quote.js"
 
 // TODO you will want to add all your other data to the AppState
 class AppState extends EventEmitter {
