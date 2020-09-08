@@ -1,6 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import imageService from "../Services/ImageService.js"
-import Image from "../models/Image.js"
+import Image from "../Models/Image.js"
 
 function _drawImage() {
   let img = ProxyState.image
