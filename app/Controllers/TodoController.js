@@ -7,6 +7,19 @@ function _drawTodos() {
   let todos = ProxyState.todos
   todos.forEach(t => template += t.Template)
   document.getElementById("todo").innerHTML = template
+  _drawRemainingTodos()
+}
+
+function _drawRemainingTodos() {
+  let todos = ProxyState.todos
+  let count = 0
+  for (let i = 0; i < todos.length; i++) {
+    let todo = todos[i]
+    if (todo.completed == false) {
+      count++
+    }
+  }
+  document.getElementById("todo-count").innerHTML = count.toString()
 }
 
 export default class TodoController {

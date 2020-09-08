@@ -6,9 +6,7 @@ export default class Quote {
 
   get Template() {
     return `
-      <p class="text-light">${this.quote}</p>
-      <br>
-      <h5 class="text-light">${this.author}</h5>
+      <p class="text-light" data-toggle="tooltip" data-placement="right" title="${this.author}">${this.quote}</p>
     `
   }
 }
